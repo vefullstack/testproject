@@ -1,10 +1,19 @@
+// Importing the CSS file for styling
 import './App.css';
-import ScaleComponent from './components/ScaleComponent';
 
+// Importing the ScaleComponent from the specified path
+import ScaleComponent from './components/Scale/ScaleComponent';
+
+/**
+ * Main function representing the root component of the application.
+ * @returns {JSX.Element} The JSX representation of the root component.
+ */
 function App() {
+  // Returning the JSX element of the ScaleComponent
   return (
-     <ScaleComponent/>
+    <ScaleComponent/>
   );
 }
 
+// Exporting the App component as the default export
 export default App;
