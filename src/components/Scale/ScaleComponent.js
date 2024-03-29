@@ -37,7 +37,7 @@ function ScaleComponent() {
         e.preventDefault(); // Prevent default form submission behavior
         try {
             // Make a POST request to your API endpoint with the form data
-            const response = await axios.post('http://4.227.170.38/api/add', parameterValues); 
+             await axios.post('http://4.227.170.38/api/add', parameterValues); 
             setIsSubmitted(true); // Set the submitted state to true
             getServices();
         } catch (error) {

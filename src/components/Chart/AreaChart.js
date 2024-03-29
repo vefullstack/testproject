@@ -16,6 +16,8 @@ const AreaChart = ({ width, height, data }) => {
       .range([boundsHeight, 0]);
   }, [data, height]);
 
+  console.log(min)
+
   const [xMin, xMax] = d3.extent(data, (d) => d.x);
   const xScale = useMemo(() => {
     return d3

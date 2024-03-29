@@ -2,7 +2,7 @@
 import './App.css';
 
 // Importing the ScaleComponent from the specified path
-// import ScaleComponent from './components/Scale/ScaleComponent';
+import ScaleComponent from './components/Scale/ScaleComponent';
 
 /**
  * Main function representing the root component of the application.
@@ -11,10 +11,7 @@ import './App.css';
 function App() {
   // Returning the JSX element of the ScaleComponent
   return (
-    <>
-    Hello
-    {/* <ScaleComponent/> */}
-    </>
+    <ScaleComponent/>
   );
 }
 

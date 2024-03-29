@@ -1,6 +1,5 @@
 import React from 'react'
-import AreaChart from './AreaChart'
-import { data } from "./data";
+import AreaChart from './AreaChart' 
 
 
 export default function index(props) {
