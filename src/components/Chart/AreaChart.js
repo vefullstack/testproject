@@ -14,7 +14,7 @@ const AreaChart = ({ width, height, data }) => {
       .scaleLinear()
       .domain([0, max || 0])
       .range([boundsHeight, 0]);
-  }, [boundsHeight, data, height, max]);
+  }, [boundsHeight, max]);
 
   console.log(min)
 
@@ -24,7 +24,7 @@ const AreaChart = ({ width, height, data }) => {
       .scaleLinear()
       .domain([xMin || 0, xMax || 0])
       .range([0, boundsWidth]);
-  }, [boundsWidth, data, width, xMin, xMax]);
+  }, [boundsWidth, xMin, xMax]);
 
   useEffect(() => {
     const svgElement = d3.select(axesRef.current);
