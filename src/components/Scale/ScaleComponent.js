@@ -37,7 +37,7 @@ function ScaleComponent() {
         e.preventDefault(); // Prevent default form submission behavior
         try {
             // Make a POST request to your API endpoint with the form data
-            const response = await axios.post('http://localhost:4000/api/add', parameterValues); 
+            const response = await axios.post('http://4.227.170.38/api/add', parameterValues); 
             setIsSubmitted(true); // Set the submitted state to true
             getServices();
         } catch (error) {
@@ -48,7 +48,7 @@ function ScaleComponent() {
     const getServices = async (e) => { 
         try {
             // Make a POST request to your API endpoint with the form data
-            const response = await axios.get('http://localhost:4000/api'); 
+            const response = await axios.get('http://4.227.170.38/api'); 
             setServicesList(response?.data);  
         } catch (error) {
             console.error('Error:', error);
@@ -60,7 +60,7 @@ function ScaleComponent() {
         <div className="container mt-5">
             <h2><b>Rate your satisfaction with our service</b></h2>
             <div className='row'>
-            <form className='pt-5 col-lg-8' onSubmit={handleSubmit}> 
+            <form className='pt-5 col-lg-5' onSubmit={handleSubmit}> 
                 {/* Rendering ScaleList component for each parameter */}
                 <ScaleList name="SaaS Security Risk Mitigation" keyname="SaaS_Security_Risk_Mitigation" parameter={parameterValues.SaaS_Security_Risk_Mitigation} onChange={handleSliderChange}/>
                 <ScaleList name="Data Loss Prevention over SaaS" keyname="Data_Loss_Prevention_over_SaaS" parameter={parameterValues.Data_Loss_Prevention_over_SaaS} onChange={handleSliderChange}/>
@@ -70,8 +70,8 @@ function ScaleComponent() {
                 {/* Submit button */}
                 <button type="submit" className="btn btn-primary">Submit</button>
             </form>
-            <div className='col-lg-4'>
-                {(servicesList?.data?.length > 0 && 
+            <div className='col-lg-6 offset-lg-1'>
+                {(servicesList?.length > 0 && 
                  <Feature data={servicesList}/>
             )}
            

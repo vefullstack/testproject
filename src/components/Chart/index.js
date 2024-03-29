@@ -14,7 +14,7 @@ export default function index(props) {
 ]
 
   topArray?.forEach((obj, index) => { 
-    obj.x = parseInt(props?.data?.data[index].Use_Case_Importance);
+    obj.x = parseInt(props?.data[index].Use_Case_Importance);
 });
 
 console.log(topArray);
