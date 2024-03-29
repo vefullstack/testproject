@@ -37,7 +37,7 @@ function ScaleComponent() {
         e.preventDefault(); // Prevent default form submission behavior
         try {
             // Make a POST request to your API endpoint with the form data
-             await axios.post('http://4.227.170.38/api/add', parameterValues); 
+             await axios.post('https://azurenodeapp.eastus.cloudapp.azure.com/api/add', parameterValues); 
             setIsSubmitted(true); // Set the submitted state to true
             getServices();
         } catch (error) {
@@ -48,7 +48,7 @@ function ScaleComponent() {
     const getServices = async (e) => { 
         try {
             // Make a POST request to your API endpoint with the form data
-            const response = await axios.get('http://4.227.170.38/api'); 
+            const response = await axios.get('https://azurenodeapp.eastus.cloudapp.azure.com/api'); 
             setServicesList(response?.data);  
         } catch (error) {
             console.error('Error:', error);
